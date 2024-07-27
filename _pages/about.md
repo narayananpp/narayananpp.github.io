@@ -22,4 +22,4 @@ I also actively collaborate with [Mr. Anantharaman PN](https://www.linkedin.com/
 
 I recently completed my B.Tech in Mechanical Engineering from National Institute of Technology, Bhopal. 
 
-My research interests converge on Language and Robotics, intrigued by how foundational models/Vision-Language-Action models can be empowered to solve complex robotic tasks such as Navigation, Localization and Mapping, Decision making, all within a unified agentic framework.
+My research interests converge on Language and Robotics, exploring the integration of personality AI with advanced perception, planning, and decision-making in socially aware robots. I am intrigued by how these systems can enhance human-robot interaction and physical intelligence through understanding social cues and adaptive behavior.
