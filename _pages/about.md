@@ -9,17 +9,15 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. hi. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an undergraduate researcher at [Stochastic Robotics Lab](https://www.stochlab.com), headed by Dr. Shishir Kolathaya in the Indian Institute of Science, Bangalore, where I develop AI algorithms to enable Quadrupedal Locomotion on extremely-rugged terrains. My work involves developing algorithms that support a range of Quadrupedal Morphologies and deploying these solutions on hardware. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I also actively collaborate with [Mr. Anantharaman PN](https://www.linkedin.com/in/anantharamanp/), Founder & CEO - [JN Research Labs LLP, Bangalore](https://www.linkedin.com/company/jnresearch/), on research projects that utilize Generative AI for advanced tabular representation and analytics, which includes developing solutions for Tabular Q&A and Summarization.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I recently completed by B.Tech in Mechanical Engineering from National Institute of Technology, Bhopal. 
