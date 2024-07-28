@@ -1,6 +1,6 @@
 ---
-layout: about
-title: about
+layout: About
+title: About
 permalink: /
 subtitle: Undergraduate Student Researcher at Indian Institute of Science, Bangalore
 
