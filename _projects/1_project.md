@@ -5,7 +5,7 @@ description: Diverse quadruped locomotive behaviors on different terrains
 img: assets/img/go1_pic.jpeg
 importance: 1
 category: work
-related_publications: flase
+related_publications: false
 ---
 
 This work presents a novel approach to quadruped locomotion control across diverse
