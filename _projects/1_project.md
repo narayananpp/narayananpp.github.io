@@ -44,13 +44,16 @@ terrains, leveraging multiple gaits including trotting, hopping and bounding.
     Architecture diagram depicting our proposed method.
 </div>
 
-We leverage the **Asymmetric actor-critic** framework wherein the actor receives
+We utilize **Isaac Gym** simulation for training our RL policies. We leverage the **Asymmetric actor-critic** framework wherein the actor receives
 partial state information (POMDP), while the critic has access to the full state, including
 privileged information. This setup enhances the adaptability and robustness of the learning
 process by simulating real-world partial observability scenarios. We propose an **Asymmetric
 reward architecture** wherein robots navigating uneven terrain receive lesser coefficients of
-negative auxiliary rewards compared to those on flat surfaces. This adaptation, based on the
-**Isaac Gym** environment, optimizes locomotion strategies by balancing risk and performance
+negative auxiliary rewards compared to those on flat surfaces. In our experiments, we dedicate x% of the total terrain area as flat surface and (1-x) % for
+uneven surfaces composed of stairs and slopes. x % of the total robots are initialised on the flat
+surface and receive full scales of auxiliary rewards while the rest of the robot are initialised on
+uneven ground and receive a reduced scale of auxiliary rewards. This adaptation, based on the
+Isaac Gym environment, optimizes locomotion strategies by balancing risk and performance
 across different terrains. 
 
 <div class="row">
