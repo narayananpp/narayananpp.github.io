@@ -2,7 +2,7 @@
 layout: page
 title: HySem
 description: A context length optimized LLM pipeline for unstructured tabular extraction
-img: assets/img/12.jpg
+img: assets/img/publication_preview/hysem.png
 importance: 1
 category: work
 related_publications: true
