@@ -44,21 +44,14 @@ terrains, leveraging multiple gaits including trotting, hopping and bounding.
     Architecture diagram depicting our proposed method.
 </div>
 
-We leverage the **asymmetric actor-critic** framework wherein the actor receives
+We leverage the **Asymmetric actor-critic** framework wherein the actor receives
 partial state information (POMDP), while the critic has access to the full state, including
 privileged information. This setup enhances the adaptability and robustness of the learning
-process by simulating real-world partial observability scenarios. We propose an **asymmetric
+process by simulating real-world partial observability scenarios. We propose an **Asymmetric
 reward architecture** wherein robots navigating uneven terrain receive lesser coefficients of
 negative auxiliary rewards compared to those on flat surfaces. This adaptation, based on the
-Isaac Gym environment, optimizes locomotion strategies by balancing risk and performance
-across different terrains. By implementing asymmetric rewards, our approach differentiates between robots navigating
-flat surfaces and those traversing uneven terrain. On flat surfaces, the emphasis is placed on
-learning and accurately tracking behavioral commands. Conversely, for robots navigating uneven terrain, the priority shifts to effectively tracking
-velocity and successfully traversing the challenging landscape, with less strict adherence to
-auxiliary commands.
-
-Additionally, we integrate _Control Barrier Function-based rewards_ to imbue our controller
-with less aggressive and more energy-efficient locomotion.
+**Isaac Gym** environment, optimizes locomotion strategies by balancing risk and performance
+across different terrains. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -69,5 +62,15 @@ with less aggressive and more energy-efficient locomotion.
     We utilize the above reward structure proposed in the paper "Walk-these-Ways" for training our Policy.
 </div>
 
-Looking ahead, we envision leveraging **diffusion models** to further enhance our approach.
+By implementing asymmetric rewards, our approach differentiates between robots navigating
+flat surfaces and those traversing uneven terrain. On flat surfaces, the emphasis is placed on
+learning and accurately tracking behavioral commands. Conversely, for robots navigating uneven terrain, the priority shifts to effectively tracking
+velocity and successfully traversing the challenging landscape, with less strict adherence to
+auxiliary commands.
 
+Additionally, we integrate _Control Barrier Function-based rewards_ to imbue our controller
+with less aggressive and more energy-efficient locomotion.
+
+Looking ahead, we envision leveraging **Diffusion models** to further enhance our approach.
+
+A detailed report of this work is available under "**Publications and Technical Reports**" subsection of this webpage.
