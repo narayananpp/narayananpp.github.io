@@ -44,20 +44,26 @@ terrains, leveraging multiple gaits including trotting, hopping and bounding.
     Architecture diagram depicting our proposed method.
 </div>
 
-We leverage the asymmetric actor-critic framework wherein the actor receives
+We leverage the **asymmetric actor-critic** framework wherein the actor receives
 partial state information (POMDP), while the critic has access to the full state, including
 privileged information. This setup enhances the adaptability and robustness of the learning
-process by simulating real-world partial observability scenarios. We propose an asymmetric
-reward architecture wherein robots navigating uneven terrain receive lesser coefficients of
+process by simulating real-world partial observability scenarios. We propose an **asymmetric
+reward architecture** wherein robots navigating uneven terrain receive lesser coefficients of
 negative auxiliary rewards compared to those on flat surfaces. This adaptation, based on the
 Isaac Gym environment, optimizes locomotion strategies by balancing risk and performance
 across different terrains.
 
-Additionally, we integrate Control Barrier Function-based rewards to imbue our controller
+Additionally, we integrate _Control Barrier Function-based rewards_ to imbue our controller
 with less aggressive and more energy-efficient locomotion.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/wtw_rewards.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    We utilize the above reward structure proposed in the paper "Walk-these-Ways" for training our Policy.
+</div>
+
+Looking ahead, we envision leveraging **diffusion models** to further enhance our approach.
 
