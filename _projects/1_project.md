@@ -51,7 +51,11 @@ process by simulating real-world partial observability scenarios. We propose an 
 reward architecture** wherein robots navigating uneven terrain receive lesser coefficients of
 negative auxiliary rewards compared to those on flat surfaces. This adaptation, based on the
 Isaac Gym environment, optimizes locomotion strategies by balancing risk and performance
-across different terrains.
+across different terrains. By implementing asymmetric rewards, our approach differentiates between robots navigating
+flat surfaces and those traversing uneven terrain. On flat surfaces, the emphasis is placed on
+learning and accurately tracking behavioral commands. Conversely, for robots navigating uneven terrain, the priority shifts to effectively tracking
+velocity and successfully traversing the challenging landscape, with less strict adherence to
+auxiliary commands.
 
 Additionally, we integrate _Control Barrier Function-based rewards_ to imbue our controller
 with less aggressive and more energy-efficient locomotion.
