@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: DepthForge  
+description: A Monocular Image-based Depth estimation - A Classification Approach 
 img: assets/img/3.jpg
 importance: 2
 category: work
-giscus_comments: true
+giscus_comments: false # true
 ---
 
 Every project has a beautiful feature showcase page.
