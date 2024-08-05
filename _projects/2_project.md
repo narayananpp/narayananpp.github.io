@@ -16,39 +16,34 @@ various simulated indoor environments, such as hallways and classrooms.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/webots_wheeled.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/monodepth_architecture.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    The above clip depicts our custom wheeled robotic platform with monocular cameras and 2D lidars fitted for data-collection in Webots simuation. 
+    Architecture diagram depicting our method
 </div>
 
+We deploy our **custom wheeled-robot platform** in the **Webots robotic simulation** containing realistic indoor environemnts for data-collection. We place monocular cameras on the front and rear 
+sides of the robot to obtain images. We stack _multiple 2D LIDARs_ along the robot’s vertical axis to capture depth information from various angles.
+We obtain the distance to the nearest obstacle using these 2d LIDARs and assign classes such as **"very near", "near", "average", "far"** based on predefined distance ranges.
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-8 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/near.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-8 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/average.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-8 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/far.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Images captured in Webots simulation, corresponding to the classes, "near", "average" and "far" respectively
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+We randomly apply differential speeds to the robot and record a history of 3 images captured at regular intervels of 100ms along with their corresponding class labels and obtain our training dataset.
+To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** and **camera FOV**.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -62,8 +57,4 @@ You describe how you toiled, sweated, _bled_ for your project, and then... you r
     You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
