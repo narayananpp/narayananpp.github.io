@@ -43,7 +43,7 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
 </div>
 
 We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of 3 images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
-To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** and **camera FOV**.
+To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** **and** **camera FOV**.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
