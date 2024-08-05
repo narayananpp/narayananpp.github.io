@@ -32,10 +32,16 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
         {% include figure.liquid loading="eager" path="assets/img/near.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<div class="caption">
+    "near"
+</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/average.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="caption">
+    "average"
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -43,7 +49,7 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
     </div>
 </div>
 <div class="caption">
-    Images captured in Webots simulation, corresponding to the classes, "near", "average" and "far" respectively
+    "far"
 </div>
 
 We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of 3 images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
