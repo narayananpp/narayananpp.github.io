@@ -11,8 +11,8 @@ giscus_comments: false # true
 Effective real-time distance estimation is critical for robotic navigation, especially in dynamic and complex environments. 
 This research presents a novel method for estimating the **distance to the nearest object** from the camera using a sequence of monocular images.
 It also features a unique **data-collection approach** that leverages robotic simulation platforms to rapidly create varied and comprehensive datasets.
-By analyzing a sequence of three images, our approach classifies the shortest distance to objects and demonstrates high accuracy across 
-various simulated indoor environments, such as hallways and classrooms.
+By analyzing a sequence of three images, our approach classifies the distance to the nearest object into predefined distance classes and demonstrates high accuracy across 
+various simulated indoor environments.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
