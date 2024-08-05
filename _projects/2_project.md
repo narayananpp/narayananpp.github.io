@@ -55,16 +55,25 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
 We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of five images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
 To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** **and** **camera FOV**.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+To evaluate our model, we collect test dataset from a new indoor "**Classroom**" setting using the same data collection procedure used for training. We report **>90% accuracy** in the test data, thus validating the efficacy of our novel approach.
+Further, we collect a minimalistic test dataset from the real world and evaluate our model. While there is a substantial shift in the real world RGB distributions compared to the simulation distribution, our model fares well for **"Very Near" and "Near"** class labels.
+We hypothesize that by fine-tuning the model with a minimalistic real-world dataset, our model can adapt to the real-world settings. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/very_near_real.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Real world image with the class label: "Very_near"
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/average_real.png" title="" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Real world image with the class label: "Near"
 </div>
 
 
