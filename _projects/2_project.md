@@ -11,7 +11,7 @@ giscus_comments: false # true
 Effective real-time distance estimation is critical for robotic navigation, especially in dynamic and complex environments. 
 This research presents a novel method for estimating the **distance to the nearest object** from the camera using a sequence of monocular images.
 It also features a unique **data-collection approach** that leverages robotic simulation platforms to rapidly create varied and comprehensive datasets.
-By analyzing a sequence of three images, our approach classifies the distance to the nearest object into predefined distance classes and demonstrates high accuracy across 
+By analyzing a sequence of five images, our approach classifies the distance to the nearest object into predefined distance classes and demonstrates high accuracy across 
 various simulated indoor environments.
 
 <div class="row">
@@ -52,7 +52,7 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
     "far"
 </div>
 
-We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of 3 images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
+We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of five images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
 To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** **and** **camera FOV**.
 
 <div class="row justify-content-sm-center">
