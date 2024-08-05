@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DepthForge  
-description: A Monocular Image-based Depth estimation - A Classification Approach 
+description: Monocular Image-based Depth estimation - A Classification Approach 
 img: assets/img/project2_pic.png
 importance: 2
 category: work
