@@ -31,9 +31,13 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/near.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/average.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/far.jpeg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
