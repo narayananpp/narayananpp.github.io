@@ -42,7 +42,7 @@ We obtain the distance to the nearest obstacle using these 2d LIDARs and assign 
     Images captured in Webots simulation, corresponding to the classes, "near", "average" and "far" respectively
 </div>
 
-We randomly apply differential speeds to the robot and record a history of 3 images captured at regular intervels of 100ms along with their corresponding class labels and obtain our training dataset.
+We randomize the robot's trajectory by applying differential speeds to the wheels and record a history of 3 images. The images are captured at regular intervels of 100ms along with their corresponding class labels to obtain the training dataset.
 To ensure diversity in the training dataset and adaptability to real-world settings, we collect data at different indoor settings such as **"Apartment", "Factory Hall", "Office" and "Kitchen"** with varying levels of **lighting** and **camera FOV**.
 
 <div class="row justify-content-sm-center">
