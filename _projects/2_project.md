@@ -23,8 +23,8 @@ various simulated indoor environments, such as hallways and classrooms.
     Architecture diagram depicting our method
 </div>
 
-We deploy our **custom wheeled-robot platform** in the **Webots robotic simulation** containing realistic indoor environments, for the purpose of data-collection. We place monocular cameras on the front and rear 
-sides of the robot to obtain images. We stack _multiple 2D LIDARs_ along the robot’s vertical axis to capture depth information from various angles.
+We deploy our **custom wheeled-robot platform** in the **Webots robotic simulation** containing realistic indoor environments, for the purpose of data-collection. We place _monocular cameras_ in the front and rear 
+sides of the robot and stack _multiple 2D LIDARs_ along the robot’s vertical axis to capture depth information from various angles.
 We obtain the distance to the nearest obstacle using these 2d LIDARs and assign classes such as **"very near", "near", "average", "far"** based on predefined distance ranges.
 
 <div class="row">
