@@ -7,7 +7,7 @@ importance: 7
 category: Completed
 related_publications: false
 ---
-Recent advances in employing Deep Reinforcement Learning (DRL) for quadruped locomotion ([RMA](https://arxiv.org/abs/2107.04034), [DreamWaQ](https://arxiv.org/abs/2301.10602)) have proven to be remarkably robust
+Recent advances in employing **Deep Reinforcement Learning** for quadruped locomotion ([RMA](https://arxiv.org/abs/2107.04034), [DreamWaQ](https://arxiv.org/abs/2301.10602)) have proven to be remarkably robust
 and promising. This work presents an _end-to-end RL framework_ that enables quadruped locomotion on flat terrains using **PyBullet simulation platform**. 
 Trained on flat surfaces with fractal noise in simulation, our approach relies on **proprioceptive** inputs, eliminating the need
 for cameras or exteroception sensors. The framework exhibits robustness against external pushes and friction changes.
