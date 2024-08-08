@@ -4,7 +4,7 @@ title: QuadScape
 description: Diverse quadruped locomotive behaviors on different terrains
 img: assets/img/go1_pic.jpeg
 importance: 1
-category: work
+category: Completed
 related_publications: false
 ---
 
