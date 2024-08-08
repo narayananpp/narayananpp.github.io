@@ -51,6 +51,6 @@ All our policy evaluations are performed on our custom quadrupedal model, **"Sto
 which is a **medium-sized quadruped**. The integration of direction tracking capabilities is reserved
 for our future work.
 
-**All code will be made publically available soon at https://github.com/StochLab**
+**All code will be made publically available soon at [StochLab Github](https://github.com/StochLab)**
 
 
