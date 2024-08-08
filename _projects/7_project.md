@@ -31,7 +31,7 @@ joint angles of the robot during stand-still position.
     </div>
 </div>
 
-We adopt the reward function employed by Rapid Motor Adaptation (RMA), which is formulated
+We adopt the reward functions employed by [Rapid Motor Adaptation (RMA)](https://arxiv.org/abs/2107.04034) for our training, which is formulated
 as follows:
 
 <div class="row justify-content-sm-center">
