@@ -5,7 +5,7 @@ description: An end-to-end RL based quadruped locomotion using PyBullet
 img: assets/img/stoch3.png
 importance: 7
 category: Completed
-related_publications: true
+related_publications: false
 ---
 
 <div class="row">
