@@ -42,7 +42,7 @@ as follows:
 
 To guide our learning process, we used a **Fixed Curriculum strategy** to adjust reward coefficients,
 manage responses to external forces, and handle friction changes. We follow the strategy adopted in [RMA](https://arxiv.org/abs/2107.04034),
-wherein the negative reward coefficients are initialized with low values and are gradually increased as the training progresses. This
+wherein the negative reward coefficients are initialized with very low values and are gradually increased as the training progresses. This
 is done to ensure that the training does not collapse at the start, due to overwhelming negative rewards. 
 
 All our policy evaluations are performed on our custom quadrupedal model, **"Stoch3"**
