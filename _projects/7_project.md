@@ -30,6 +30,9 @@ joint angles of the robot during stand-still position.
         {% include figure.liquid path="assets/img/rma_teacher_student.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<div class="caption">
+    Architecture diagram of the "teacher-student" paradigm proposed in RMA.
+</div>
 
 We adopt the reward functions employed by [Rapid Motor Adaptation (RMA)](https://arxiv.org/abs/2107.04034) for our training, which is formulated
 as follows:
