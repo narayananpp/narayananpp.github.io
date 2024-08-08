@@ -22,8 +22,8 @@ x-direction. We follow the **teacher-student training paradigm** as adopted in [
 wherein a teacher policy has access to privileged data such as terrain friction, contact forces, etc, from the simulation
 engine, apart from receiving the robot's states. This privileged data is separately encoded by an encoder and serves as a ground-truth to train
 a student policy via **supervised learning**. The student policy accepts a **history of observations** and tries to estimate the 
-encoded privileged information. The output of the policy is a 12-dim target joint angles, perturbed relative to the default 
-joint angles of the robot during stand-still. 
+encoded privileged information. The output of the policy is 12-dim target joint angles, perturbed relative to the default 
+joint angles of the robot during stand-still position. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
