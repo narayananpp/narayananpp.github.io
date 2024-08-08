@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 7
-description: with background image
+title: StochBullet
+description: An end-to-end RL based quadruped locomotion using PyBullet
 img: assets/img/stoch3_png
 importance: 7
 category: Completed
