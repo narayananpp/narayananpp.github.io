@@ -43,7 +43,9 @@ as follows:
 To guide our learning process, we used a **Fixed Curriculum strategy** to adjust reward coefficients,
 manage responses to external forces, and handle friction changes. We follow the strategy adopted in [RMA](https://arxiv.org/abs/2107.04034),
 wherein the negative reward coefficients are initialized with very low values and are gradually increased as the training progresses. This
-is done to ensure that the training does not collapse at the start, due to overwhelming negative rewards. 
+is done because, during the initial stages of training, the robot abandons its task or chooses an early
+termination when the task reward is overwhelmed by penalties from the auxiliary objectives such
+as energy minimization term, action rate term, z velocity term, etc.  
 
 All our policy evaluations are performed on our custom quadrupedal model, **"Stoch3"**
 which is a **medium-sized quadruped**. The integration of direction tracking capabilities is reserved
