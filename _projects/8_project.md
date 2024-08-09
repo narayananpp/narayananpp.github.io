@@ -19,8 +19,8 @@ experimentation and can be customized for a number of applications.
 <div class="caption">
     Demo of Joystick control interface to control a service robot
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sensors_list.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -31,5 +31,7 @@ experimentation and can be customized for a number of applications.
 We use a Joystick as our general purpose user-interface for facilitating data acquisition. Joystick provides 
 high flexibility and easy-to-use user interface for controlling the robot as it acts as a single super controller enabling control of various sensors and
 actuators present in the robot. 
+
+
 
 
