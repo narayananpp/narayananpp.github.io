@@ -44,8 +44,9 @@ actuators present in the robot.
 Data was collected by operating the robot using a Joystick control over 2 surfaces
 with varying surface characteristics.
 
-**More details about the dataset and the method are available at [Indoor Robot Navigation Dataset](https://www.kaggle.com/datasets/narayananpp/indoor-robot-navigation-dataset-irnd) [Slides](https://www.slideshare.net/slideshow/dataset-generation-interfaces-for-intelligent-robotics/253320030#9)**
-Report available under **"Publications and Technical Reports"** subsection of this webpage.
+More details about the **dataset** are available at [Indoor Robot Navigation Dataset](https://www.kaggle.com/datasets/narayananpp/indoor-robot-navigation-dataset-irnd). 
+**Slides** available at [Slides](https://www.slideshare.net/slideshow/dataset-generation-interfaces-for-intelligent-robotics/253320030#9).
+**Report** available under **"Publications and Technical Reports"** subsection of this webpage.
 
 
 
