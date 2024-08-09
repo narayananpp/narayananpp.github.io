@@ -14,14 +14,15 @@ Our robot is a lab version of a service robot. It is built as a general platform
 experimentation and can be customized for a number of applications.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm-12 mt-3 mt-md-0">
         {% include video.liquid path="https://www.youtube.com/embed/l8ZkpbIXRls" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="row">
     <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/wheeled_robot.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 
 
 <div class="row">
