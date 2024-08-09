@@ -32,6 +32,14 @@ We use a Joystick as our general purpose user-interface for facilitating data ac
 high flexibility and easy-to-use user interface for controlling the robot as it acts as a single super controller enabling control of various sensors and
 actuators present in the robot. 
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/wheeled_archi.png" title="" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Fig. displaying the overall architecture used for controlling the service robot
+</div>
 
 
 
