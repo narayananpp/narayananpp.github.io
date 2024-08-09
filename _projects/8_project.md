@@ -7,7 +7,7 @@ importance: 2
 category: Completed
 giscus_comments: false
 ---
-The goal of this work is to create a general purpose user-interface that helps to acquire labeled datasets for
+The goal of this work is to create a **general purpose user-interface** that helps to acquire labeled datasets for
 performing AI tasks such as Autonomous Navigation, by navigating a real world wheeled robot in an
 indoor environment. This comprehensive dataset, collected from the robot's sensors and actuators, can be utilized for offline reinforcement learning or supervised learning tasks. 
 Our robot is a lab version of a service robot. It is built as a general platform for
@@ -28,7 +28,7 @@ experimentation and can be customized for a number of applications.
     Fig. displaying the list of sensors and actuators present in the robot, categorized into a) Navigation control, b) Vision, c) Audio
 </div>
 
-We use a Joystick as our general purpose user-interface for facilitating data acquisition. Joystick provides 
+We use a **Joystick** as our general purpose user-interface for facilitating data acquisition. Joystick provides 
 high flexibility and easy-to-use user interface for controlling the robot as it acts as a single super controller enabling control of various sensors and
 actuators present in the robot. 
 
@@ -38,8 +38,14 @@ actuators present in the robot.
     </div>
 </div>
 <div class="caption">
-    Fig. displaying the overall architecture used for controlling the service robot
+    Fig. highlighting the overall architecture used for controlling the service robot
 </div>
+
+Data was collected by operating the robot using a Joystick control over 2 surfaces
+with varying surface characteristics.
+
+**More details about the dataset and the method are available at [Indoor Robot Navigation Dataset](https://www.kaggle.com/datasets/narayananpp/indoor-robot-navigation-dataset-irnd) [Slides](https://www.slideshare.net/slideshow/dataset-generation-interfaces-for-intelligent-robotics/253320030#9)**
+Report available under **"Publications and Technical Reports"** subsection of this webpage.
 
 
 
