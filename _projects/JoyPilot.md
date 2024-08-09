@@ -3,7 +3,7 @@ layout: page
 title: JoyPilot
 description: Development of dataset generation interfaces for autonomous navigation of wheeled robots
 img: assets/img/wheeled_robot.png
-importance: 2
+importance: 4
 category: Completed
 giscus_comments: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: StochBullet
 description: An end-to-end RL based quadruped locomotion using PyBullet
 img: assets/img/stoch3.png
-importance: 7
+importance: 3
 category: Completed
 related_publications: false
 ---
