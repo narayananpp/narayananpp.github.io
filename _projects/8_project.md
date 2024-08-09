@@ -13,11 +13,11 @@ indoor environment. This comprehensive dataset, collected from the robot's senso
 Our robot is a lab version of a service robot. It is built as a general platform for
 experimentation and can be customized for a number of applications.
 
-<div class="row justify-content-center">
-    <div class="col-lg-10 col-md-12 mt-3 mt-md-0">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/l8ZkpbIXRls" frameborder="0" allowfullscreen></iframe>
-        </div>
+[![Demo of Joystick control Interface to control a service robot](https://img.youtube.com/vi/l8ZkpbIXRls/0.jpg)](https://www.youtube.com/watch?v=l8ZkpbIXRls)
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include video.liquid path="https://www.youtube.com/embed/l8ZkpbIXRls" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">
