@@ -1,8 +1,8 @@
 ---
 layout: page
-title: CaptionCraft
-description: Enhanced Image Captioning
-img: assets/img/CaptionCraft.jpg
+title: GroQLoCO
+description: GRoQ-LoCO- Generalist and Robot-agnostic Quadruped Locomotion Control using Offline Datasets
+img: assets/img/groqloco.jpeg
 importance: 3
 category: Completed
 related_publications: false
