@@ -26,6 +26,6 @@ I have also worked on sim-to-real transfer for quadruped locomotion, designing r
 
 While at IISc, I collaborated with the [Improbable AI Lab](https://cap.csail.mit.edu/improbable-ai-lab-lab-tour), led by [Dr. Pulkit Agrawal](https://people.csail.mit.edu/pulkitag/) at MIT, on deep RL-based locomotion research for custom quadrupeds.
 
-I also collaborated with [Mr. Anantharaman PN](https://www.linkedin.com/in/anantharamanp/), Founder & CEO of JN Research Labs, Bangalore, on Generative AI for structured data analytics. This included research on tabular Q&A, summarization, and building semantic representations for structured data. During my earlier internship at JN Research Labs, I also developed a joystick-based teleoperation interface for wheeled surveillance robots.
+I have collaborated with [Mr. Anantharaman PN](https://www.linkedin.com/in/anantharamanp/), Founder & CEO of JN Research Labs, Bangalore, on Generative AI for structured data analytics. This included research on tabular Q&A, summarization, and building semantic representations for structured data. During my earlier internship at JN Research Labs, I developed a joystick-based teleoperation interface for wheeled surveillance robots.
 
 I graduated with a B.Tech in Mechanical Engineering from National Institute of Technology, Bhopal, India (NIT Bhopal) in 2024.
