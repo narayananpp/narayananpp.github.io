@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Researcher at Indian Institute of Science, Bangalore
+subtitle: MS Student at RI, CMU
 
 profile:
   align: right
