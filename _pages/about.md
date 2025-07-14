@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: MS Student at RI, CMU
+subtitle: Graduate Student at RI, CMU
 
 profile:
   align: right
