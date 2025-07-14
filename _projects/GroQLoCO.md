@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GroQLoCO
-description: GRoQ-LoCO- Generalist and Robot-agnostic Quadruped Locomotion Control using Offline Datasets
+description: Generalist and Robot-agnostic Quadruped Locomotion Control using Offline Datasets
 img: assets/img/groqloco.jpeg
 importance: 3
 category: Completed
