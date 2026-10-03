@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Narayanan Palghat Parameswaran</title>
+    <meta
+      name="description"
+      content="Narayanan Palghat Parameswaran — MS Robotics student at Carnegie Mellon University working on legged robots that learn skills from language, failures, and data across embodiments."
+    />
+    <meta name="author" content="Narayanan Palghat Parameswaran" />
+    <meta property="og:title" content="Narayanan Palghat Parameswaran" />
+    <meta property="og:description" content="Robot learning at Carnegie Mellon — agentic skill generation, failure-guided curricula, and generalist locomotion." />
+    <meta property="og:image" content="https://narayananpp.github.io/assets/site/media/fcts/fig1.jpg" />
+    <meta property="og:url" content="https://narayananpp.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0b0d" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6a2b'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='40' fill='%23fff'%3En%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/site/css/style.css" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <!-- icon sprite -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4V21H3V9.75zm6.5 0h3.83v1.54h.05c.53-1 1.84-1.84 3.79-1.84 4.05 0 4.83 2.53 4.83 5.82V21h-4v-5.08c0-1.21-.02-2.77-1.69-2.77-1.69 0-1.95 1.32-1.95 2.68V21h-4V9.75z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+      <symbol id="i-kaggle" viewBox="0 0 24 24"><path fill="currentColor" d="M18.83 23.6c-.02.27-.17.4-.44.4h-3.12c-.19 0-.35-.08-.48-.25L9.55 17.2l-1.44 1.38v4.94c0 .32-.16.48-.48.48H5.21c-.32 0-.48-.16-.48-.48V.48C4.73.16 4.9 0 5.21 0h2.42c.32 0 .48.16.48.48v14.3l6.19-6.27c.15-.14.31-.21.48-.21h3.23c.27 0 .41.11.44.33.02.16-.02.3-.12.41l-6.53 6.32 6.81 8.48c.13.12.17.29.13.5z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="i-paper" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></g></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12s1.3 6.3 3.8 9"/></g></symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></g></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></g></symbol>
+    </svg>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="nav">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="brand-mark">n</span>
+          <span class="brand-name">narayanan p. parameswaran</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#robots">Robots</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+            <svg class="moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+            <svg class="sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+          </button>
+          <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ================= HERO ================= -->
+      <section class="hero" aria-label="Introduction">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow reveal"><span class="pulse"></span>Robotics Institute · Carnegie Mellon University</span>
+              <h1 class="reveal">Narayanan<br /><em>Palghat</em> Parameswaran</h1>
+              <p class="hero-lead reveal">
+                I work on robot learning.
+              </p>
+              <div class="hero-cta reveal">
+                <a class="btn btn-primary" href="#research">See the research <svg><use href="#i-down" /></svg></a>
+                <a class="btn" href="mailto:npalghat@cs.cmu.edu"><svg><use href="#i-mail" /></svg>Get in touch</a>
+                <div class="socials">
+                  <a class="icon-btn" href="https://github.com/narayananpp" aria-label="GitHub"><svg><use href="#i-github" /></svg></a>
+                  <a class="icon-btn" href="https://www.linkedin.com/in/pp-n/" aria-label="LinkedIn"><svg><use href="#i-linkedin" /></svg></a>
+                  <a class="icon-btn" href="https://www.kaggle.com/narayananpp" aria-label="Kaggle"><svg><use href="#i-kaggle" /></svg></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="reel-frame reveal">
+              <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+              <div class="reel" id="reel">
+                <video muted playsinline preload="metadata" poster="/assets/site/media/g1/carry_box.jpg" data-src="/assets/site/media/g1/carry_box.mp4"
+                  data-tag="Unitree G1 · simulation" data-cap="Whole-body box carry, generated from a text prompt"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/mimic/back_flip.jpg" data-src="/assets/site/media/mimic/back_flip.mp4"
+                  data-tag="Unitree Go2-W · hardware" data-cap="Backflip learned from an LLM-generated reference"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/g1/box_climb.jpg" data-src="/assets/site/media/g1/box_climb.mp4"
+                  data-tag="Unitree G1 · simulation" data-cap="Climbing onto a box, from a text prompt"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/fcts/hw_stairs.jpg" data-src="/assets/site/media/fcts/hw_stairs.mp4"
+                  data-tag="Quadruped parkour · hardware" data-cap="Pallet, elevated block and stair descent"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/mimic/spin_transition.jpg" data-src="/assets/site/media/mimic/spin_transition.mp4"
+                  data-tag="Unitree Go2-W · hardware" data-cap="Spin transition onto two wheels"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/groq/stair_go1.jpg" data-src="/assets/site/media/groq/stair_go1.mp4"
+                  data-tag="Unitree Go1 · hardware" data-cap="One generalist policy climbing stairs"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/mimic/2leg_skating.jpg" data-src="/assets/site/media/mimic/2leg_skating.mp4"
+                  data-tag="Unitree Go2-W · hardware" data-cap="Two-leg skating on passive wheels"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/fcts/hw_box.jpg" data-src="/assets/site/media/fcts/hw_box.mp4"
+                  data-tag="Quadruped parkour · hardware" data-cap="Box climb and drop"></video>
+                <div class="reel-hud top"><span class="rec">From the lab</span><span id="reel-count">01 / 08</span></div>
+                <div class="reel-hud bottom">
+                  <div class="reel-caption" id="reel-caption"><b>Unitree G1 · simulation</b>Whole-body box carry, generated from a text prompt</div>
+                  <div class="reel-dots" id="reel-dots" role="tablist" aria-label="Choose clip"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Unitree G1</span><span>Boston Dynamics Spot</span><span>Unitree Go2-W</span><span>Unitree Go1</span><span>Stoch 5</span><span>Franka Panda</span><span>Isaac Lab</span><span>MuJoCo</span><span>GR00T</span><span>DeepMimic</span><span>Monte Carlo Tree Search</span><span>Diffusion Policies</span><span>LLM Agents</span>
+          <span>Unitree G1</span><span>Boston Dynamics Spot</span><span>Unitree Go2-W</span><span>Unitree Go1</span><span>Stoch 5</span><span>Franka Panda</span><span>Isaac Lab</span><span>MuJoCo</span><span>GR00T</span><span>DeepMimic</span><span>Monte Carlo Tree Search</span><span>Diffusion Policies</span><span>LLM Agents</span>
+        </div>
+      </div>
+
+      <!-- ================= ABOUT ================= -->
+      <section id="about">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">About</div><h2>Hi, I'm <em>Narayanan.</em></h2></div>
+          </div>
+          <div class="about-grid">
+            <figure class="portrait reveal" style="margin: 0">
+              <img src="/assets/site/media/misc/profile.jpg" alt="Portrait of Narayanan Palghat Parameswaran" loading="lazy" width="600" height="600" />
+              <figcaption class="portrait-tag">Pittsburgh, PA</figcaption>
+            </figure>
+            <div class="prose reveal">
+              <p>How can robots pick up new physical skills from people, from language, and from their own experience? That question runs through most of my work, from generative models for control to whole-body humanoid skills.</p>
+              <p>
+                I'm a <strong>Master's student in Robotic Systems Development at Carnegie Mellon</strong>. With
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>, I study how language models can teach robots new skills: you describe a motion, and the
+                robot learns to perform it. At <a href="https://theairlab.org/">Sebastian Scherer's AirLab</a>, I'm bringing the same idea to humanoids, learning
+                whole-body skills from human demonstrations.
+              </p>
+              <p>
+                This past summer at
+                <strong>FieldAI</strong>, I worked on curricula that let quadrupeds learn parkour from their own failures. Before CMU, I spent two years with
+                <a href="https://www.shishirny.com">Shishir Kolathaya</a> at IISc on diffusion policies for multi-skill locomotion, and along the way collaborated with
+                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a> (MIT) on sim-to-real.
+              </p>
+              <div class="interests">
+                <span class="chip accent">Generative control policies</span><span class="chip accent">Whole-body control</span><span class="chip accent">Test-time steering</span><span class="chip accent">Diffusion policies</span><span class="chip accent">Vision-language-action models</span>
+              </div>
+            </div>
+          </div>
+          <div class="mentors reveal">
+            <h3>People I've learned from</h3>
+            <div class="mentor-grid">
+              <a class="mentor" href="https://www.cs.cmu.edu/~deva/"><b>Deva Ramanan</b><span>CMU · Robotics Institute</span><em>MimicAgent, prompt-to-skill agents</em></a>
+              <a class="mentor" href="https://theairlab.org/"><b>Sebastian Scherer</b><span>Carnegie Mellon · AirLab</span><em>Humanoid whole-body skills, FCTS</em></a>
+              <a class="mentor" href="https://people.csail.mit.edu/pulkitag/"><b>Pulkit Agrawal</b><span>MIT · CSAIL</span><em>Sim-to-real for quadrupeds (via IISc)</em></a>
+              <a class="mentor" href="https://www.shishirny.com"><b>Shishir Kolathaya</b><span>IISc Bangalore · SRL</span><em>Multi-skill diffusion policies</em></a>
+              <a class="mentor" href="https://www.linkedin.com/in/anantharamanp/"><b>Anantharaman P. N.</b><span>CEO, JN Research Labs · Former Director of Engineering, Adobe India</span><em>HySem</em></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= NEWS ================= -->
+      <section id="news">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">News</div><h2>Recent <em>updates</em></h2></div>
+            <p class="section-note">Papers, moves and milestones since 2024.</p>
+          </div>
+          <ul class="news reveal" id="news-list">
+            <li><time>Sep 2026</time><span class="tag paper">Paper</span><p><strong>FCTS</strong> will appear at the <strong>IROS 2026 SARL workshop</strong>. The <a href="/fcts/">project page</a> is live.</p></li>
+            <li><time>Sep 2026</time><span class="tag paper">Preprint</span><p><strong>MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation</strong> is on <a href="https://arxiv.org/abs/2609.24145">arXiv</a>, with a <a href="https://luckykantnayak.github.io/mimic-agent/">project page</a> and hardware videos.</p></li>
+            <li><time>Sep 2026</time><span class="tag career">Lab</span><p>Joined <strong>AirLab</strong> at CMU as a Graduate Student Researcher with <strong>Sebastian Scherer</strong>, working on humanoid loco-manipulation.</p></li>
+            <li><time>Aug 2026</time><span class="tag career">Internship</span><p>Wrapped up my research internship at <strong>FieldAI</strong>.</p></li>
+            <li><time>May 2026</time><span class="tag career">Internship</span><p>Started as a <strong>Robotics Research Intern at FieldAI</strong> in Irvine, CA, on perceptive quadruped parkour.</p></li>
+            <li><time>May 2026</time><span class="tag award">Award</span><p><strong>Third place</strong> in CMU 10-623 (Generative AI) for inference-time diffusion steering with a GRPO-style reward model.</p></li>
+            <li><time>Apr 2026</time><span class="tag paper">Paper</span><p><strong>MimicAgent</strong> presented at the <strong>ICLR 2026 RSI workshop</strong> (<a href="https://openreview.net/forum?id=1iAEFtFQ9M">OpenReview</a>).</p></li>
+            <li><time>Aug 2025</time><span class="tag career">CMU</span><p>Started the <strong>MS in Robotic Systems Development</strong> at Carnegie Mellon's School of Computer Science and joined <strong>Deva Ramanan's lab</strong>.</p></li>
+            <li><time>May 2025</time><span class="tag award">Admits</span><p>Admitted to MS programs at <strong>CMU</strong>, <strong>Georgia Tech</strong>, <strong>UPenn</strong> and <strong>UMD</strong>. Chose CMU.</p></li>
+            <li><time>May 2025</time><span class="tag paper">Preprint</span><p><strong>GRoQ-LoCO</strong>, a generalist and robot-agnostic quadruped locomotion policy learned from offline data, is on <a href="https://arxiv.org/abs/2505.10973">arXiv</a>.</p></li>
+            <li><time>Dec 2024</time><span class="tag paper">Paper</span><p><strong>HySem</strong> presented at the <strong>NeurIPS 2024 Table Representation Learning workshop</strong>.</p></li>
+            <li><time>Jul 2024</time><span class="tag career">Lab</span><p>Became a full-time Research Assistant at the <strong>Stochastic Robotics Lab, IISc Bangalore</strong>.</p></li>
+            <li><time>May 2024</time><span class="tag career">Degree</span><p>Graduated with a <strong>B.Tech in Mechanical Engineering</strong> from NIT Bhopal.</p></li>
+            <li><time>May 2023</time><span class="tag career">Lab</span><p>Joined the <strong>Stochastic Robotics Lab, IISc Bangalore</strong> as a Research Intern with Shishir Kolathaya.</p></li>
+          </ul>
+          <button class="btn news-more" id="news-more" aria-expanded="false">Show all news</button>
+        </div>
+      </section>
+
+      <!-- ================= RESEARCH ================= -->
+      <section id="research">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Research</div><h2>Selected <em>publications</em></h2></div>
+            <p class="section-note"><sup>*</sup> denotes equal contribution.</p>
+          </div>
+
+          <div class="pubs">
+            <!-- FCTS -->
+            <article class="pub reveal">
+              <div class="pub-media">
+                <span class="badge">FieldAI × CMU</span>
+                <img src="/assets/site/media/fcts/fig1.jpg" alt="FCTS policy reaching all waypoints on a scanned debris site where Extreme Parkour and Eurekaverse baselines fail" loading="lazy" />
+              </div>
+              <div class="pub-body">
+                <div class="venue">IROS 2026 <span class="sep">/</span> SARL Workshop</div>
+                <h3>FCTS: Failure-Guided Curriculum Tree Search Over Generated Terrain for Legged Parkour</h3>
+                <p class="authors"><span class="me">Narayanan P. Parameswaran</span>, D. K. Kim, J. Patrikar, …, S. Scherer</p>
+                <p class="pub-desc">
+                  When the policy fails on a course, FCTS records where and how it failed, and an LLM uses that to generate new terrain aimed at
+                  exactly that weakness. The policy then trains on it, and Monte Carlo Tree Search decides which of several competing curricula deserves more
+                  of the compute budget.
+                </p>
+                <div class="metrics">
+                  <div class="metric"><b>85.8%</b><span>success on medium routes, up from 28.4%</span></div>
+                  <div class="metric"><b>44.7%</b><span>success on hard routes, up from 14.9%</span></div>
+                  <div class="metric"><b>5.3×</b><span>faster than sequential search</span></div>
+                </div>
+                <div class="links">
+                  <a class="link" href="/fcts/"><svg><use href="#i-globe" /></svg>Project page</a>
+                  <a class="link" href="/fcts/#method"><svg><use href="#i-paper" /></svg>Method</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- MimicAgent -->
+            <article class="pub flip reveal">
+              <div class="pub-media">
+                <span class="badge">Deva's Lab · CMU</span>
+                <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/teaser_poster.jpg">
+                  <source data-src="/assets/site/media/mimic/teaser.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="pub-body">
+                <div class="venue">ICLR 2026 <span class="sep">/</span> RSI Workshop <span class="sep">·</span> arXiv 2026</div>
+                <h3>MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation</h3>
+                <p class="authors">Lucky Kant Nayak<sup>*</sup>, <span class="me">Narayanan P. Parameswaran<sup>*</sup></span>, Neehar Peri, Deva Ramanan <span class="eq">(<sup>*</sup>equal contribution)</span></p>
+                <p class="pub-desc">
+                  Writing a plausible reference motion is easier than writing a robust reward. Coding agents turn a prompt such as <em>"wheeled quadruped doing a frontflip"</em>
+                  into a kinematic trajectory, check it with task-agnostic unit tests, and repair the code until it passes. DeepMimic-style RL then makes it physical.
+                </p>
+                <div class="metrics">
+                  <div class="metric"><b>87%</b><span>of prompts yield semantically aligned references</span></div>
+                  <div class="metric"><b>92%</b><span>of trained policies match their prompt</span></div>
+                  <div class="metric"><b>43×</b><span>fewer LLM tokens than Eureka</span></div>
+                </div>
+                <div class="links">
+                  <a class="link" href="https://arxiv.org/abs/2609.24145"><svg><use href="#i-paper" /></svg>arXiv</a>
+                  <a class="link" href="https://luckykantnayak.github.io/mimic-agent/"><svg><use href="#i-globe" /></svg>Project page</a>
+                  <a class="link" href="https://openreview.net/forum?id=1iAEFtFQ9M"><svg><use href="#i-paper" /></svg>OpenReview</a>
+                  <a class="link" href="https://github.com/Luckykantnayak/mimicagent-datagen/tree/main"><svg><use href="#i-code" /></svg>Code</a>
+                  <button class="link" data-bib="bib-mimic"><svg><use href="#i-quote" /></svg>BibTeX</button>
+                </div>
+                <pre class="bib" id="bib-mimic">@article{nayak2026mimicagent,
+  title   = {MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation},
+  author  = {Nayak, Lucky Kant and Parameswaran, Narayanan Palghat and Peri, Neehar and Ramanan, Deva},
+  journal = {arXiv preprint arXiv:2609.24145},
+  year    = {2026}
+}</pre>
+              </div>
+            </article>
+
+            <!-- GRoQ-LoCO -->
+            <article class="pub reveal">
+              <div class="pub-media">
+                <span class="badge">IISc Bangalore</span>
+                <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/groq/groq_sim.jpg">
+                  <source data-src="/assets/site/media/groq/groq_sim.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="pub-body">
+                <div class="venue">arXiv 2025</div>
+                <h3>GRoQ-LoCO: Generalist and Robot-agnostic Quadruped Locomotion Control using Offline Datasets</h3>
+                <p class="authors"><span class="me">Narayanan PP</span>, Sarvesh Prasanth Venkatesan, Srinivas Kantha Reddy, Shishir Kolathaya</p>
+                <p class="pub-desc">
+                  One policy, many quadrupeds. A recurrent transformer is trained by offline behavior cloning on 2,000+ expert trajectories per morphology. It fuses stair and flat-ground skills
+                  from proprioception alone, with no robot-specific encodings, and runs on a Unitree Go1 and the 20 kg-payload Stoch 5 without fine-tuning.
+                </p>
+                <div class="metrics">
+                  <div class="metric"><b>5+</b><span>unseen morphologies, zero-shot</span></div>
+                  <div class="metric"><b>0</b><span>robot-specific encodings or fine-tuning</span></div>
+                </div>
+                <div class="links">
+                  <a class="link" href="https://arxiv.org/abs/2505.10973"><svg><use href="#i-paper" /></svg>arXiv</a>
+                  <a class="link" href="https://www.stochlab.com/GRoQ-LoCO/"><svg><use href="#i-globe" /></svg>Project page</a>
+                  <a class="link" href="/assets/pdf/groqloco.pdf"><svg><use href="#i-paper" /></svg>PDF</a>
+                  <button class="link" data-bib="bib-groq"><svg><use href="#i-quote" /></svg>BibTeX</button>
+                </div>
+                <pre class="bib" id="bib-groq">@article{pp2025groqloco,
+  title   = {GRoQ-LoCO: Generalist and Robot-agnostic Quadruped Locomotion Control using Offline Datasets},
+  author  = {PP, Narayanan and Venkatesan, Sarvesh Prasanth and Reddy, Srinivas Kantha and Kolathaya, Shishir},
+  journal = {arXiv preprint arXiv:2505.10973},
+  year    = {2025}
+}</pre>
+              </div>
+            </article>
+
+            <!-- HySem -->
+            <article class="pub flip reveal">
+              <div class="pub-media" style="background: #fff">
+                <span class="badge">JN Research Labs</span>
+                <img src="/assets/img/publication_preview/hysem.png" alt="HySem pipeline diagram" loading="lazy" style="object-fit: contain; padding: 20px" />
+              </div>
+              <div class="pub-body">
+                <div class="venue">NeurIPS 2024 <span class="sep">/</span> TRL Workshop</div>
+                <h3>HySem: A Context Length Optimized LLM Pipeline for Unstructured Tabular Extraction</h3>
+                <p class="authors"><span class="me">Narayanan PP</span>, Anantharaman Palacode Narayana Iyer</p>
+                <p class="pub-desc">
+                  Tokenizer-aligned context compression lets an on-premise 8B LLM turn messy pharmaceutical HTML tables, with nested headers and domain terms, into semantic JSON.
+                </p>
+                <div class="metrics">
+                  <div class="metric"><b>−39%</b><span>context length, lossless</span></div>
+                  <div class="metric"><b>+25 pts</b><span>over open-source baselines</span></div>
+                </div>
+                <div class="links">
+                  <a class="link" href="https://openreview.net/forum?id=1f6SIVYExy"><svg><use href="#i-paper" /></svg>OpenReview</a>
+                  <a class="link" href="https://arxiv.org/abs/2408.09434"><svg><use href="#i-paper" /></svg>arXiv</a>
+                  <a class="link" href="/assets/pdf/75_HySem_A_context_length_opti.pdf"><svg><use href="#i-paper" /></svg>PDF</a>
+                  <button class="link" data-bib="bib-hysem"><svg><use href="#i-quote" /></svg>BibTeX</button>
+                </div>
+                <pre class="bib" id="bib-hysem">@inproceedings{pp2024hysem,
+  title     = {HySem: A context length optimized LLM pipeline for unstructured tabular extraction},
+  author    = {PP, Narayanan and Iyer, Anantharaman Palacode Narayana},
+  booktitle = {NeurIPS 2024 Third Table Representation Learning Workshop},
+  year      = {2024}
+}</pre>
+              </div>
+            </article>
+          </div>
+
+          <div class="reports reveal">
+            <h3>Technical reports</h3>
+            <div class="report"><span class="yr">2024</span><span class="t">MorphDLoco: Morphology-aware Diffusion Policy for Multi-robot Multi-skill Locomotion<small>Technical report · IISc</small></span><span class="links"><a class="link" href="/assets/pdf/morphdloco.pdf">PDF</a></span></div>
+            <div class="report"><span class="yr">2024</span><span class="t">Diverse Quadruped Locomotive Behavior on Different Terrains<small>B.Tech project report · NIT Bhopal</small></span><span class="links"><a class="link" href="/assets/pdf/NITB_Thesis.pdf">PDF</a></span></div>
+            <div class="report"><span class="yr">2023</span><span class="t">End-to-end Reinforcement-based Quadruped Locomotion in PyBullet<small>Internship report · IISc</small></span><span class="links"><a class="link" href="/assets/pdf/iisc_2023_intern.pdf">PDF</a></span></div>
+            <div class="report"><span class="yr">2022</span><span class="t">Designing Joystick Control Interfaces for Service Robot Teleoperation<small>Internship report · JN Research Labs</small></span><span class="links"><a class="link" href="/assets/pdf/Project_report_internship_website.pdf">PDF</a></span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ROBOTS ================= -->
+      <section id="robots">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Robots in action</div><h2>Quadrupeds <em>to humanoids</em></h2></div>
+            <p class="section-note">Legged robots on hardware, and humanoid skills in simulation.</p>
+          </div>
+          <div class="gallery">
+            <figure class="tile big reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/back_flip.jpg"><source data-src="/assets/site/media/mimic/back_flip.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree Go2-W · hardware</b>Backflip · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/front_flip.jpg"><source data-src="/assets/site/media/g1/front_flip.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Front flip · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_bricks.jpg"><source data-src="/assets/site/media/fcts/hw_bricks.mp4" type="video/mp4" /></video>
+              <figcaption><b>Quadruped parkour · hardware</b>Bricks & raised platforms · FCTS</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/cartwheel.jpg"><source data-src="/assets/site/media/g1/cartwheel.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Cartwheel · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/side_flip.jpg"><source data-src="/assets/site/media/mimic/side_flip.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree Go2-W · hardware</b>Side flip · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/spin_transition.jpg"><source data-src="/assets/site/media/mimic/spin_transition.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree Go2-W · hardware</b>Spin transition · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/groq/stair_go1.jpg"><source data-src="/assets/site/media/groq/stair_go1.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree Go1 · hardware</b>Stairs, one generalist policy · GRoQ-LoCO</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_stairs.jpg"><source data-src="/assets/site/media/fcts/hw_stairs.mp4" type="video/mp4" /></video>
+              <figcaption><b>Quadruped parkour · hardware</b>Pallet & stair descent · FCTS</figcaption>
+            </figure>
+            <figure class="tile wide reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_box.jpg"><source data-src="/assets/site/media/fcts/hw_box.mp4" type="video/mp4" /></video>
+              <figcaption><b>Quadruped parkour · hardware</b>Box climb & drop · FCTS</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/retarget_basket.jpg"><source data-src="/assets/site/media/g1/retarget_basket.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Retargeted human basket carry · AirLab</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/retarget_lamp.jpg"><source data-src="/assets/site/media/g1/retarget_lamp.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Retargeted human lamp handling · AirLab</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/misc/quadscape.jpg"><source data-src="/assets/site/media/misc/quadscape.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree Go1 · hardware</b>Pronking outdoors · QuadScape</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+      <section id="experience">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Experience</div><h2>Where I've <em>worked</em></h2></div>
+          </div>
+          <ol class="timeline">
+            <li class="job current reveal">
+              <div class="job-date">Sep 2026 — now<br /><span class="now-pill">● current</span></div>
+              <div class="job-body">
+                <h3>AirLab, Carnegie Mellon University</h3>
+                <p class="role">Graduate Student Researcher · Advisor: <a href="https://theairlab.org/">Sebastian Scherer</a> · Pittsburgh, PA</p>
+                <p class="job-line">Learning whole-body humanoid skills from human demonstrations.</p>
+              </div>
+            </li>
+            <li class="job reveal">
+              <div class="job-date">May — Aug 2026</div>
+              <div class="job-body">
+                <h3>FieldAI</h3>
+                <p class="role">Robotics Research Intern · Irvine, CA</p>
+                <p class="job-line">Automatic curricula for perceptive quadruped parkour.</p>
+              </div>
+            </li>
+            <li class="job current reveal">
+              <div class="job-date">Aug 2025 — now<br /><span class="now-pill">● current</span></div>
+              <div class="job-body">
+                <h3>Deva's Lab, Carnegie Mellon University</h3>
+                <p class="role">Graduate Student Researcher · Advisor: <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a> · Pittsburgh, PA</p>
+                <p class="job-line">Teaching legged robots new skills from language.</p>
+              </div>
+            </li>
+            <li class="job reveal">
+              <div class="job-date">May 2023 — Jun 2025</div>
+              <div class="job-body">
+                <h3>Stochastic Robotics Lab, IISc Bangalore</h3>
+                <p class="role">Research Intern (May 2023 – Jun 2024) · Research Assistant (Jul 2024 – Jun 2025) · Advisor: <a href="https://www.shishirny.com">Shishir Kolathaya</a></p>
+                <p class="job-line">Multi-skill diffusion policies and generalist quadruped locomotion, with a sim-to-real collaboration with Pulkit Agrawal (MIT).</p>
+              </div>
+            </li>
+            <li class="job reveal">
+              <div class="job-date">May 2022 — Jul 2024</div>
+              <div class="job-body">
+                <h3>JN Research Labs</h3>
+                <p class="role">Research Intern · Summer Intern · Mentor: <a href="https://www.linkedin.com/in/anantharamanp/">Anantharaman P. N.</a> · Bangalore</p>
+                <p class="job-line">LLMs for document understanding.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Projects</div><h2>Things I've <em>built</em></h2></div>
+            <div class="filters" role="group" aria-label="Filter projects">
+              <button class="filter on" data-filter="all">All</button>
+              <button class="filter" data-filter="cmu">CMU</button>
+              <button class="filter" data-filter="robots">Robots</button>
+              <button class="filter" data-filter="ai">GenAI / LLMs</button>
+            </div>
+          </div>
+          <div class="projects">
+            <a class="proj reveal" data-cat="cmu ai" href="https://drive.google.com/drive/folders/1xGUALfU0zXnp0L4lqwibvHiZq0zKZfMo?usp=sharing">
+              <div class="proj-media contain"><span class="badge">🏆 3rd place</span>
+                <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/misc/prg.jpg"><source data-src="/assets/site/media/misc/prg.mp4" type="video/mp4" /></video>
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>CMU 10-623</span><span>2026</span></div>
+                <h3>Inference-Time Diffusion Steering with a GRPO-Style Reward Model</h3>
+                <p>A timestep-conditioned DiT reward model, trained with a Bradley–Terry objective on group rollouts, steers a frozen Motion Diffusion Model at every denoising step. Physics violations drop 11%.</p>
+                <div class="chips"><span class="chip">Diffusion</span><span class="chip">Reward models</span><span class="chip">MDM</span></div>
+                <span class="proj-link">View project <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="cmu robots ai" href="https://drive.google.com/drive/folders/1KCuusNOdHAeabCxlPx5QVS5Rg6n9GtnI?usp=sharing">
+              <div class="proj-media art" aria-hidden="true">
+                <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 92h92" /><rect x="30" y="80" width="26" height="12" rx="2" /><path d="M43 80V58l26-22 22 14" /><circle cx="43" cy="58" r="5" /><circle cx="69" cy="36" r="5" />
+                  <path d="M91 50v10M85 64l6-4 6 4" /><rect x="72" y="74" width="12" height="18" rx="2" /><rect x="90" y="80" width="12" height="12" rx="2" /><circle cx="22" cy="86" r="5" />
+                </svg>
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>CMU 16-662</span><span>2026</span></div>
+                <h3>Open-Vocabulary Robotic Sorting with Vision-Language Models</h3>
+                <p>A zero-shot pipeline with a VLM in the loop for a Franka Panda. It grounds open-vocabulary sorting rules in a structured memory of the scene state and reaches 90% placement accuracy across 3 VLMs.</p>
+                <div class="chips"><span class="chip">Franka Panda</span><span class="chip">VLMs</span><span class="chip">Manipulation</span></div>
+                <span class="proj-link">View project <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="ai" href="https://github.com/narayananpp/Research-Copilot">
+              <div class="proj-media contain"><img src="/assets/site/media/misc/copilot_graph.png" alt="Research CoPilot agent graph" loading="lazy" /></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>Open source</span><span>2025</span></div>
+                <h3>Research CoPilot: Multi-Agent Auto-Research</h3>
+                <p>Planner, retriever, critic and writer agents with RAG over retrieved literature. They turn raw ideas into grounded, publication-ready research proposals.</p>
+                <div class="chips"><span class="chip">LangGraph</span><span class="chip">RAG</span><span class="chip">Multi-agent</span></div>
+                <span class="proj-link">GitHub <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="robots ai" href="https://drive.google.com/drive/u/1/folders/1d7lIGzUEiw7Hru-2edOX3wwKPWqf3ioV">
+              <div class="proj-media contain"><img src="/assets/img/publication_preview/morph.png" alt="Multi-skill diffusion policy diagram" loading="lazy" /></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>IISc</span><span>2025</span></div>
+                <h3>Multi-Skill Diffusion Policies for Generalist Quadruped Control</h3>
+                <p>A conditional DDPM policy that fuses diverse gaits into one generalist controller. It generates multi-skill actions in real time and transfers zero-shot to 5+ unseen morphologies and terrains.</p>
+                <div class="chips"><span class="chip">DDPM</span><span class="chip">Behavior cloning</span><span class="chip">Cross-embodiment</span></div>
+                <span class="proj-link">View project <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="robots" href="/assets/pdf/NITB_Thesis.pdf">
+              <div class="proj-media"><video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/misc/quadscape.jpg"><source data-src="/assets/site/media/misc/quadscape.mp4" type="video/mp4" /></video></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>IISc · B.Tech thesis</span><span>2024</span></div>
+                <h3>QuadScape: Diverse Gaits on Diverse Terrains</h3>
+                <p>Asymmetric actor-critic RL with terrain-dependent auxiliary rewards. Trotting, pronking and bounding over stairs and slopes in Isaac Gym, deployed on a Unitree Go1.</p>
+                <div class="chips"><span class="chip">Isaac Gym</span><span class="chip">PPO</span><span class="chip">Go1</span></div>
+                <span class="proj-link">Read report <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="robots" href="/assets/pdf/iisc_2023_intern.pdf">
+              <div class="proj-media"><video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/misc/stochbullet.jpg"><source data-src="/assets/site/media/misc/stochbullet.mp4" type="video/mp4" /></video></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>IISc</span><span>2023</span></div>
+                <h3>StochBullet: End-to-End RL Locomotion in PyBullet</h3>
+                <p>A reproduction of RMA's teacher–student training with PPO and a fixed curriculum on the Stoch 3 quadruped. It stays robust to pushes and friction changes.</p>
+                <div class="chips"><span class="chip">PyBullet</span><span class="chip">RMA</span><span class="chip">PPO</span></div>
+                <span class="proj-link">Read report <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="robots ai" href="/assets/img/dist_archi.png">
+              <div class="proj-media"><img src="/assets/img/depthforge.jpg" alt="DepthForge" loading="lazy" /></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>NIT Bhopal</span><span>2023</span></div>
+                <h3>DepthForge: Monocular Distance as Classification</h3>
+                <p>A Webots data pipeline with a camera and stacked-LiDAR rover, plus a temporal CNN over 5-frame sequences. Over 90% accuracy in an unseen indoor scene, and it transfers to the real world at close range.</p>
+                <div class="chips"><span class="chip">Webots</span><span class="chip">Temporal CNN</span></div>
+                <span class="proj-link">Architecture <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="ai" href="https://github.com/narayananpp">
+              <div class="proj-media"><img src="/assets/img/CaptionCraft.jpg" alt="CaptionCraft" loading="lazy" /></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>Independent</span><span>2024</span></div>
+                <h3>CaptionCraft: Region-Aware Image Captioning</h3>
+                <p>DETR boxes and MiniGPT-4 region captions, fused by Mistral-7B into denser, better-grounded image descriptions.</p>
+                <div class="chips"><span class="chip">DETR</span><span class="chip">MiniGPT-4</span><span class="chip">Mistral</span></div>
+                <span class="proj-link">GitHub <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+            <a class="proj reveal" data-cat="robots" href="https://www.kaggle.com/datasets/narayananpp/indoor-robot-navigation-dataset-irnd">
+              <div class="proj-media"><img src="/assets/img/wheeled_robot.png" alt="Four-wheeled differential-drive indoor robot" loading="lazy" /></div>
+              <div class="proj-body">
+                <div class="proj-meta"><span>JN Research Labs</span><span>2022</span></div>
+                <h3>Indoor Obstacle Avoidance with Actor-Critic RL</h3>
+                <p>Actor-critic RL policies for obstacle avoidance on a four-wheeled differential-drive robot in indoor environments. The accompanying Indoor Robot Navigation Dataset won a Kaggle bronze medal.</p>
+                <div class="chips"><span class="chip">Actor-critic RL</span><span class="chip">Navigation</span><span class="chip">Dataset</span></div>
+                <span class="proj-link">Dataset <svg><use href="#i-arrow" /></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION / HONORS / SKILLS ================= -->
+      <section id="education">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Background</div><h2>Education <em>&amp; honors</em></h2></div>
+          </div>
+          <div class="cols">
+            <div class="panel reveal">
+              <h3>Education</h3>
+              <div class="edu">
+                <div class="edu-top"><h4>Carnegie Mellon University</h4><span class="when">2025 — May 2027</span></div>
+                <p>M.S. Robotic Systems Development, School of Computer Science</p>
+                <span class="gpa">GPA 4.07 / 4.0</span>
+              </div>
+              <div class="edu">
+                <div class="edu-top"><h4>National Institute of Technology, Bhopal</h4><span class="when">2020 — 2024</span></div>
+                <p>B.Tech. Mechanical Engineering</p>
+                <span class="gpa">GPA 3.75 / 4.0</span>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <h3>Honors &amp; awards</h3>
+              <ul class="honors">
+                <li><time>2026</time><span><strong>Third Place</strong>, CMU 10-623 Generative AI course project</span></li>
+                <li><time>2025</time><span><strong>MS admits</strong>: CMU, Georgia Tech, UPenn, UMD</span></li>
+                <li><time>2024</time><span><strong>NPTEL Topper</strong> in three courses offered by the IITs</span></li>
+                <li><time>2022</time><span><strong>Kaggle Bronze Medal</strong>, Indoor Robot Navigation Dataset</span></li>
+                <li><time>2022</time><span><strong>5th place</strong>, Vision Verse CV hackathon, IIT Mandi</span></li>
+                <li><time>2022</time><span><strong>Certificate of Appreciation</strong>, Shaastra '22, IIT Madras</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="skill-group panel reveal"><h4>Programming &amp; ML</h4><div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">HuggingFace</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">MATLAB</span></div></div>
+            <div class="skill-group panel reveal"><h4>Distributed training</h4><div class="chips"><span class="chip">PyTorch DDP</span><span class="chip">DeepSpeed</span><span class="chip">Ray</span><span class="chip">AMP</span><span class="chip">torch.compile</span></div></div>
+            <div class="skill-group panel reveal"><h4>Robotics &amp; simulation</h4><div class="chips"><span class="chip">Isaac Lab</span><span class="chip">Isaac Gym</span><span class="chip">MuJoCo Playground</span><span class="chip">PyBullet</span><span class="chip">Webots</span><span class="chip">Gazebo</span></div></div>
+            <div class="skill-group panel reveal"><h4>Tools &amp; DevOps</h4><div class="chips"><span class="chip">Kubernetes</span><span class="chip">Linux</span><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Git</span></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= CONTACT / FOOTER ================= -->
+    <footer class="contact" id="contact">
+      <div class="wrap">
+        <div class="kicker reveal">Contact</div>
+        <h2 class="reveal"><a href="mailto:npalghat@cs.cmu.edu">Get in touch.</a></h2>
+        <p class="reveal">Happy to talk about robot learning.</p>
+        <div class="hero-cta reveal" style="margin-top: 26px">
+          <a class="btn btn-primary" href="mailto:npalghat@cs.cmu.edu"><svg><use href="#i-mail" /></svg>npalghat@cs.cmu.edu</a>
+          <a class="btn" href="https://www.linkedin.com/in/pp-n/"><svg><use href="#i-linkedin" /></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/narayananpp"><svg><use href="#i-github" /></svg>GitHub</a>
+        </div>
+        <div class="footer-row">
+          <span>© <span id="year">2026</span> Narayanan Palghat Parameswaran · Robotics Institute, Carnegie Mellon University, Pittsburgh, PA</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/site/js/main.js" defer></script>
+  </body>
+</html>

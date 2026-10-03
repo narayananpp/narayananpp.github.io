@@ -1,0 +1,25 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Assemble static site
+        run: |
+          mkdir _site
+          cp -r index.html 404.html robots.txt .nojekyll assets publications projects news cv _site/
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          single-commit: true
