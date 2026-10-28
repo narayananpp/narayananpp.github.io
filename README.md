@@ -4,7 +4,7 @@ Personal website of Narayanan Palghat Parameswaran — https://narayananpp.githu
 
 A hand-built static site (no build step):
 
-- `index.html` — all page content (news, publications, experience, projects)
+- `index.html` — all page content (news, publications, writing, experience, projects)
 - `assets/site/css/style.css` — design system (dark/light themes via CSS variables)
 - `assets/site/js/main.js` — theme toggle, hero reel, lazy video autoplay, filters, BibTeX copy
 - `assets/site/media/` — compressed videos (H.264 MP4) and posters
@@ -26,6 +26,16 @@ Add an `<li>` at the top of `#news-list` in `index.html`:
 ```
 
 Tag classes: `paper`, `career`, `award` (or none).
+
+## Adding a blog post or report
+
+Add an `<li class="post">` at the top of `#post-list` in `index.html` (newest first):
+
+```html
+<li class="post"><time>2026</time><span class="kind">Blog</span><a class="t" href="…">Title<small>Venue · Lab</small></a></li>
+```
+
+To feature a post, edit the `.post-feature` card above the list.
 
 ## Converting a GIF to a web video
 

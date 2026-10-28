@@ -6,12 +6,12 @@
     <title>Narayanan Palghat Parameswaran</title>
     <meta
       name="description"
-      content="Narayanan Palghat Parameswaran — MS Robotics student at Carnegie Mellon University working on legged robots that learn skills from language, failures, and data across embodiments."
+      content="Narayanan Palghat Parameswaran — MS Robotics student at Carnegie Mellon University working on agentic robotics and whole-body humanoid control."
     />
     <meta name="author" content="Narayanan Palghat Parameswaran" />
     <meta property="og:title" content="Narayanan Palghat Parameswaran" />
-    <meta property="og:description" content="Robot learning at Carnegie Mellon — agentic skill generation, failure-guided curricula, and generalist locomotion." />
-    <meta property="og:image" content="https://narayananpp.github.io/assets/site/media/fcts/fig1.jpg" />
+    <meta property="og:description" content="Robot learning at Carnegie Mellon: agentic robotics, whole-body humanoid control, and legged locomotion." />
+    <meta property="og:image" content="https://narayananpp.github.io/assets/site/media/humotar/tour_stairs.jpg" />
     <meta property="og:url" content="https://narayananpp.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0a0b0d" />
@@ -58,6 +58,7 @@
           <li><a href="#news">News</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#robots">Robots</a></li>
+          <li><a href="#writing">Writing</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -99,25 +100,29 @@
             <div class="reel-frame reveal">
               <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
               <div class="reel" id="reel">
-                <video muted playsinline preload="metadata" poster="/assets/site/media/g1/carry_box.jpg" data-src="/assets/site/media/g1/carry_box.mp4"
-                  data-tag="Unitree G1 · simulation" data-cap="Whole-body box carry, generated from a text prompt"></video>
+                <video muted playsinline preload="metadata" poster="/assets/site/media/humotar/tour_stairs.jpg" data-src="/assets/site/media/humotar/tour_stairs.mp4"
+                  data-tag="Unitree G1 · HuMoTAR" data-cap="Cooperative stair carry, retargeted from human demonstrations"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/mimic/back_flip.jpg" data-src="/assets/site/media/mimic/back_flip.mp4"
                   data-tag="Unitree Go2-W · hardware" data-cap="Backflip learned from an LLM-generated reference"></video>
-                <video muted playsinline preload="none" poster="/assets/site/media/g1/box_climb.jpg" data-src="/assets/site/media/g1/box_climb.mp4"
-                  data-tag="Unitree G1 · simulation" data-cap="Climbing onto a box, from a text prompt"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/humotar/tour_shelf.jpg" data-src="/assets/site/media/humotar/tour_shelf.mp4"
+                  data-tag="Unitree G1 · HuMoTAR" data-cap="Tilting and raising a shelf"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/fcts/hw_stairs.jpg" data-src="/assets/site/media/fcts/hw_stairs.mp4"
                   data-tag="Quadruped parkour · hardware" data-cap="Pallet, elevated block and stair descent"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/humotar/dining_chair.jpg" data-src="/assets/site/media/humotar/dining_chair.mp4"
+                  data-tag="Unitree G1 · HuMoTAR" data-cap="Lifting a dining chair by its backrest"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/mimic/spin_transition.jpg" data-src="/assets/site/media/mimic/spin_transition.mp4"
                   data-tag="Unitree Go2-W · hardware" data-cap="Spin transition onto two wheels"></video>
+                <video muted playsinline preload="none" poster="/assets/site/media/humotar/tour_truck.jpg" data-src="/assets/site/media/humotar/tour_truck.mp4"
+                  data-tag="Unitree G1 · HuMoTAR" data-cap="Moving a loaded hand truck"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/groq/stair_go1.jpg" data-src="/assets/site/media/groq/stair_go1.mp4"
                   data-tag="Unitree Go1 · hardware" data-cap="One generalist policy climbing stairs"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/mimic/2leg_skating.jpg" data-src="/assets/site/media/mimic/2leg_skating.mp4"
                   data-tag="Unitree Go2-W · hardware" data-cap="Two-leg skating on passive wheels"></video>
                 <video muted playsinline preload="none" poster="/assets/site/media/fcts/hw_box.jpg" data-src="/assets/site/media/fcts/hw_box.mp4"
                   data-tag="Quadruped parkour · hardware" data-cap="Box climb and drop"></video>
-                <div class="reel-hud top"><span class="rec">From the lab</span><span id="reel-count">01 / 08</span></div>
+                <div class="reel-hud top"><span class="rec">From the lab</span><span id="reel-count">01 / 10</span></div>
                 <div class="reel-hud bottom">
-                  <div class="reel-caption" id="reel-caption"><b>Unitree G1 · simulation</b>Whole-body box carry, generated from a text prompt</div>
+                  <div class="reel-caption" id="reel-caption"><b>Unitree G1 · HuMoTAR</b>Cooperative stair carry, retargeted from human demonstrations</div>
                   <div class="reel-dots" id="reel-dots" role="tablist" aria-label="Choose clip"></div>
                 </div>
               </div>
@@ -145,29 +150,27 @@
               <figcaption class="portrait-tag">Pittsburgh, PA</figcaption>
             </figure>
             <div class="prose reveal">
-              <p>How can robots pick up new physical skills from people, from language, and from their own experience? That question runs through most of my work, from generative models for control to whole-body humanoid skills.</p>
               <p>
-                I'm a <strong>Master's student in Robotic Systems Development at Carnegie Mellon</strong>. With
-                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>, I study how language models can teach robots new skills: you describe a motion, and the
-                robot learns to perform it. At <a href="https://theairlab.org/">Sebastian Scherer's AirLab</a>, I'm bringing the same idea to humanoids, learning
-                whole-body skills from human demonstrations.
+                I am a Master's student at the <strong>Robotics Institute, Carnegie Mellon University</strong>, where I work with
+                <a href="https://www.cs.cmu.edu/~deva/">Dr. Deva Ramanan</a> and <a href="https://theairlab.org/">Dr. Sebastian Scherer</a>. My research interests span
+                <strong>agentic robotics</strong> and <strong>whole-body humanoid control</strong>.
               </p>
               <p>
-                This past summer at
-                <strong>FieldAI</strong>, I worked on curricula that let quadrupeds learn parkour from their own failures. Before CMU, I spent two years with
-                <a href="https://www.shishirny.com">Shishir Kolathaya</a> at IISc on diffusion policies for multi-skill locomotion, and along the way collaborated with
-                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a> (MIT) on sim-to-real.
+                To this end, I have explored text-to-trajectory generation, where coding agents synthesize kinematic references for
+                reference-guided reinforcement learning of dynamic legged skills (<a href="https://luckykantnayak.github.io/mimic-agent/">MimicAgent</a>), and semantic retargeting of human–object interaction demonstrations to humanoids with
+                foundational priors (<a href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/">HuMoTAR</a>). I am currently interested in <strong>in-context learning</strong> for humanoid–object
+                interaction, where agents improve on new tasks by drawing on experience from related ones.
               </p>
               <div class="interests">
-                <span class="chip accent">Generative control policies</span><span class="chip accent">Whole-body control</span><span class="chip accent">Test-time steering</span><span class="chip accent">Diffusion policies</span><span class="chip accent">Vision-language-action models</span>
+                <span class="chip accent">Agentic robotics</span><span class="chip accent">Whole-body humanoid control</span><span class="chip accent">Human–object interaction</span><span class="chip accent">In-context learning</span><span class="chip accent">Motion retargeting</span>
               </div>
             </div>
           </div>
           <div class="mentors reveal">
             <h3>People I've learned from</h3>
             <div class="mentor-grid">
-              <a class="mentor" href="https://www.cs.cmu.edu/~deva/"><b>Deva Ramanan</b><span>CMU · Robotics Institute</span><em>MimicAgent, prompt-to-skill agents</em></a>
-              <a class="mentor" href="https://theairlab.org/"><b>Sebastian Scherer</b><span>Carnegie Mellon · AirLab</span><em>Humanoid whole-body skills, FCTS</em></a>
+              <a class="mentor" href="https://www.cs.cmu.edu/~deva/"><b>Deva Ramanan</b><span>CMU · Robotics Institute</span><em>MimicAgent, HuMoTAR</em></a>
+              <a class="mentor" href="https://theairlab.org/"><b>Sebastian Scherer</b><span>Carnegie Mellon · AirLab</span><em>HuMoTAR, FCTS</em></a>
               <a class="mentor" href="https://people.csail.mit.edu/pulkitag/"><b>Pulkit Agrawal</b><span>MIT · CSAIL</span><em>Sim-to-real for quadrupeds (via IISc)</em></a>
               <a class="mentor" href="https://www.shishirny.com"><b>Shishir Kolathaya</b><span>IISc Bangalore · SRL</span><em>Multi-skill diffusion policies</em></a>
               <a class="mentor" href="https://www.linkedin.com/in/anantharamanp/"><b>Anantharaman P. N.</b><span>CEO, JN Research Labs · Former Director of Engineering, Adobe India</span><em>HySem</em></a>
@@ -184,6 +187,7 @@
             <p class="section-note">Papers, moves and milestones since 2024.</p>
           </div>
           <ul class="news reveal" id="news-list">
+            <li><time>Oct 2026</time><span class="tag paper">Blog</span><p><strong>HuMoTAR: Semantic Humanoid Retargeting with Foundational Priors</strong> is out. Read the <a href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/">project blog</a>.</p></li>
             <li><time>Sep 2026</time><span class="tag paper">Paper</span><p><strong>FCTS</strong> will appear at the <strong>IROS 2026 SARL workshop</strong>. The <a href="/fcts/">project page</a> is live.</p></li>
             <li><time>Sep 2026</time><span class="tag paper">Preprint</span><p><strong>MimicAgent: Quadruped Skills via Prompt-to-Trajectory Generation</strong> is on <a href="https://arxiv.org/abs/2609.24145">arXiv</a>, with a <a href="https://luckykantnayak.github.io/mimic-agent/">project page</a> and hardware videos.</p></li>
             <li><time>Sep 2026</time><span class="tag career">Lab</span><p>Joined <strong>AirLab</strong> at CMU as a Graduate Student Researcher with <strong>Sebastian Scherer</strong>, working on humanoid loco-manipulation.</p></li>
@@ -208,12 +212,48 @@
         <div class="wrap">
           <div class="section-head reveal">
             <div><div class="kicker">Research</div><h2>Selected <em>publications</em></h2></div>
-            <p class="section-note"><sup>*</sup> denotes equal contribution.</p>
+            <p class="section-note"><sup>*</sup> denotes equal contribution. Longer write-ups are under <a href="#writing">Writing</a>.</p>
           </div>
 
           <div class="pubs">
-            <!-- FCTS -->
+            <!-- HuMoTAR -->
             <article class="pub reveal">
+              <div class="pub-media">
+                <span class="badge">AirLab × Deva's Lab · CMU</span>
+                <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/tour_stairs.jpg">
+                  <source data-src="/assets/site/media/humotar/tour.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="pub-body">
+                <div class="venue">Project blog <span class="sep">·</span> 2026</div>
+                <h3>HuMoTAR: Semantic Humanoid Retargeting with Foundational Priors</h3>
+                <p class="authors"><span class="me">Narayanan P. Parameswaran</span>, Jay Karhade, Haoyang He, Neehar Peri, Jay Patrikar, Dong-Ki Kim, Shayegan Omidshafiei, Sebastian Scherer, Deva Ramanan</p>
+                <p class="pub-desc">
+                  Retargeting should preserve what the human does to the object, not just how the body moves. HuMoTAR fixes the demonstrated object trajectory as the
+                  goal and lets an ensemble of coding agents refine the kinematic reference and controller through closed-loop rollouts with a frozen whole-body
+                  tracking policy on a Unitree G1 with Dex3 hands.
+                </p>
+                <div class="metrics">
+                  <div class="metric"><b>14.3 cm</b><span>mean object ADD on HUMOTO, down from 56.7 cm</span></div>
+                  <div class="metric"><b>−28.6%</b><span>ADD vs. a single coding agent, across 40 tasks</span></div>
+                  <div class="metric"><b>3×</b><span>lower error on a shelf-righting task when reusing experience from related tasks</span></div>
+                </div>
+                <div class="links">
+                  <a class="link" href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/"><svg><use href="#i-globe" /></svg>Project blog</a>
+                  <button class="link" data-bib="bib-humotar"><svg><use href="#i-quote" /></svg>BibTeX</button>
+                </div>
+                <pre class="bib" id="bib-humotar">@misc{parameswaran2026humotar,
+  title        = {HuMoTAR: Semantic Humanoid Retargeting with Foundational Priors},
+  author       = {Palghat Parameswaran, Narayanan and Karhade, Jay and He, Haoyang and Peri, Neehar and Patrikar, Jay and Kim, Dong-Ki and Omidshafiei, Shayegan and Scherer, Sebastian and Ramanan, Deva},
+  year         = {2026},
+  howpublished = {Project blog},
+  url          = {https://narayananpp.github.io/semantic-humanoid-retargeting-blog/}
+}</pre>
+              </div>
+            </article>
+
+            <!-- FCTS -->
+            <article class="pub flip reveal">
               <div class="pub-media">
                 <span class="badge">FieldAI × CMU</span>
                 <img src="/assets/site/media/fcts/fig1.jpg" alt="FCTS policy reaching all waypoints on a scanned debris site where Extreme Parkour and Eurekaverse baselines fail" loading="lazy" />
@@ -240,7 +280,7 @@
             </article>
 
             <!-- MimicAgent -->
-            <article class="pub flip reveal">
+            <article class="pub reveal">
               <div class="pub-media">
                 <span class="badge">Deva's Lab · CMU</span>
                 <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/teaser_poster.jpg">
@@ -277,7 +317,7 @@
             </article>
 
             <!-- GRoQ-LoCO -->
-            <article class="pub reveal">
+            <article class="pub flip reveal">
               <div class="pub-media">
                 <span class="badge">IISc Bangalore</span>
                 <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/groq/groq_sim.jpg">
@@ -312,7 +352,7 @@
             </article>
 
             <!-- HySem -->
-            <article class="pub flip reveal">
+            <article class="pub reveal">
               <div class="pub-media" style="background: #fff">
                 <span class="badge">JN Research Labs</span>
                 <img src="/assets/img/publication_preview/hysem.png" alt="HySem pipeline diagram" loading="lazy" style="object-fit: contain; padding: 20px" />
@@ -344,13 +384,6 @@
             </article>
           </div>
 
-          <div class="reports reveal">
-            <h3>Technical reports</h3>
-            <div class="report"><span class="yr">2024</span><span class="t">MorphDLoco: Morphology-aware Diffusion Policy for Multi-robot Multi-skill Locomotion<small>Technical report · IISc</small></span><span class="links"><a class="link" href="/assets/pdf/morphdloco.pdf">PDF</a></span></div>
-            <div class="report"><span class="yr">2024</span><span class="t">Diverse Quadruped Locomotive Behavior on Different Terrains<small>B.Tech project report · NIT Bhopal</small></span><span class="links"><a class="link" href="/assets/pdf/NITB_Thesis.pdf">PDF</a></span></div>
-            <div class="report"><span class="yr">2023</span><span class="t">End-to-end Reinforcement-based Quadruped Locomotion in PyBullet<small>Internship report · IISc</small></span><span class="links"><a class="link" href="/assets/pdf/iisc_2023_intern.pdf">PDF</a></span></div>
-            <div class="report"><span class="yr">2022</span><span class="t">Designing Joystick Control Interfaces for Service Robot Teleoperation<small>Internship report · JN Research Labs</small></span><span class="links"><a class="link" href="/assets/pdf/Project_report_internship_website.pdf">PDF</a></span></div>
-          </div>
         </div>
       </section>
 
@@ -363,28 +396,44 @@
           </div>
           <div class="gallery">
             <figure class="tile big reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/tour.jpg"><source data-src="/assets/site/media/humotar/tour.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>41 retargeted human–object interactions · HuMoTAR</figcaption>
+            </figure>
+            <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/back_flip.jpg"><source data-src="/assets/site/media/mimic/back_flip.mp4" type="video/mp4" /></video>
               <figcaption><b>Unitree Go2-W · hardware</b>Backflip · MimicAgent</figcaption>
             </figure>
             <figure class="tile reveal">
-              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/front_flip.jpg"><source data-src="/assets/site/media/g1/front_flip.mp4" type="video/mp4" /></video>
-              <figcaption><b>Unitree G1 · simulation</b>Front flip · MimicAgent</figcaption>
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/dining_chair.jpg"><source data-src="/assets/site/media/humotar/dining_chair.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Lift a dining chair by its backrest · HuMoTAR</figcaption>
             </figure>
             <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_bricks.jpg"><source data-src="/assets/site/media/fcts/hw_bricks.mp4" type="video/mp4" /></video>
-              <figcaption><b>Quadruped parkour · hardware</b>Bricks & raised platforms · FCTS</figcaption>
+              <figcaption><b>Quadruped parkour · hardware</b>Bricks &amp; raised platforms · FCTS</figcaption>
             </figure>
             <figure class="tile reveal">
-              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/cartwheel.jpg"><source data-src="/assets/site/media/g1/cartwheel.mp4" type="video/mp4" /></video>
-              <figcaption><b>Unitree G1 · simulation</b>Cartwheel · MimicAgent</figcaption>
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/shelf.jpg"><source data-src="/assets/site/media/humotar/shelf.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Raise a fallen shelf, with experience · HuMoTAR</figcaption>
+            </figure>
+            <figure class="tile wide reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/lamp_mug.jpg"><source data-src="/assets/site/media/humotar/lamp_mug.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Seated: switch on a lamp and drink from a mug · HuMoTAR</figcaption>
             </figure>
             <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/side_flip.jpg"><source data-src="/assets/site/media/mimic/side_flip.mp4" type="video/mp4" /></video>
               <figcaption><b>Unitree Go2-W · hardware</b>Side flip · MimicAgent</figcaption>
             </figure>
             <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/side_table.jpg"><source data-src="/assets/site/media/humotar/side_table.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Walk and turn carrying a side table · HuMoTAR</figcaption>
+            </figure>
+            <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/mimic/spin_transition.jpg"><source data-src="/assets/site/media/mimic/spin_transition.mp4" type="video/mp4" /></video>
               <figcaption><b>Unitree Go2-W · hardware</b>Spin transition · MimicAgent</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/rock_chair.jpg"><source data-src="/assets/site/media/humotar/rock_chair.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Rock a chair and return it upright · HuMoTAR</figcaption>
             </figure>
             <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/groq/stair_go1.jpg"><source data-src="/assets/site/media/groq/stair_go1.mp4" type="video/mp4" /></video>
@@ -392,25 +441,48 @@
             </figure>
             <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_stairs.jpg"><source data-src="/assets/site/media/fcts/hw_stairs.mp4" type="video/mp4" /></video>
-              <figcaption><b>Quadruped parkour · hardware</b>Pallet & stair descent · FCTS</figcaption>
+              <figcaption><b>Quadruped parkour · hardware</b>Pallet &amp; stair descent · FCTS</figcaption>
+            </figure>
+            <figure class="tile reveal">
+              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/humotar/clothes_stand.jpg"><source data-src="/assets/site/media/humotar/clothes_stand.mp4" type="video/mp4" /></video>
+              <figcaption><b>Unitree G1 · simulation</b>Move and release a clothes stand · HuMoTAR</figcaption>
             </figure>
             <figure class="tile wide reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/fcts/hw_box.jpg"><source data-src="/assets/site/media/fcts/hw_box.mp4" type="video/mp4" /></video>
-              <figcaption><b>Quadruped parkour · hardware</b>Box climb & drop · FCTS</figcaption>
-            </figure>
-            <figure class="tile reveal">
-              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/retarget_basket.jpg"><source data-src="/assets/site/media/g1/retarget_basket.mp4" type="video/mp4" /></video>
-              <figcaption><b>Unitree G1 · simulation</b>Retargeted human basket carry · AirLab</figcaption>
-            </figure>
-            <figure class="tile reveal">
-              <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/g1/retarget_lamp.jpg"><source data-src="/assets/site/media/g1/retarget_lamp.mp4" type="video/mp4" /></video>
-              <figcaption><b>Unitree G1 · simulation</b>Retargeted human lamp handling · AirLab</figcaption>
+              <figcaption><b>Quadruped parkour · hardware</b>Box climb &amp; drop · FCTS</figcaption>
             </figure>
             <figure class="tile reveal">
               <video muted loop playsinline preload="none" data-autoplay poster="/assets/site/media/misc/quadscape.jpg"><source data-src="/assets/site/media/misc/quadscape.mp4" type="video/mp4" /></video>
               <figcaption><b>Unitree Go1 · hardware</b>Pronking outdoors · QuadScape</figcaption>
             </figure>
           </div>
+        </div>
+      </section>
+
+      <!-- ================= WRITING ================= -->
+      <!-- To add a post: copy a <li class="post"> into #post-list (newest first). Kinds: Blog, Tech report, Thesis, Report. -->
+      <section id="writing">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div><div class="kicker">Writing</div><h2>Blog posts <em>&amp; reports</em></h2></div>
+            <p class="section-note">Project blogs, technical reports and theses.</p>
+          </div>
+          <a class="post-feature reveal" href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/">
+            <div class="post-feature-media"><img src="/assets/site/media/humotar/tour_stairs.jpg" alt="Unitree G1 humanoids performing retargeted human–object interactions" loading="lazy" /></div>
+            <div class="post-feature-body">
+              <div class="proj-meta"><span>Blog</span><span>Oct 2026</span></div>
+              <h3>HuMoTAR: Semantic Humanoid Retargeting with Foundational Priors</h3>
+              <p>An interactive write-up of how coding agents refine human–object demonstrations into physically executable whole-body behavior on a Unitree G1, with side-by-side baselines, a refinement walkthrough and experience transfer.</p>
+              <span class="proj-link">Read the post <svg><use href="#i-arrow" /></svg></span>
+            </div>
+          </a>
+          <ul class="post-list reveal" id="post-list">
+            <li class="post"><time>2026</time><span class="kind">Blog</span><a class="t" href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/">HuMoTAR: Semantic Humanoid Retargeting with Foundational Priors<small>Project blog · AirLab and Deva's Lab, CMU</small></a></li>
+            <li class="post"><time>2024</time><span class="kind">Tech report</span><a class="t" href="/assets/pdf/morphdloco.pdf">MorphDLoco: Morphology-aware Diffusion Policy for Multi-robot Multi-skill Locomotion<small>Technical report · IISc</small></a></li>
+            <li class="post"><time>2024</time><span class="kind">Thesis</span><a class="t" href="/assets/pdf/NITB_Thesis.pdf">Diverse Quadruped Locomotive Behavior on Different Terrains<small>B.Tech project report · NIT Bhopal</small></a></li>
+            <li class="post"><time>2023</time><span class="kind">Report</span><a class="t" href="/assets/pdf/iisc_2023_intern.pdf">End-to-end Reinforcement-based Quadruped Locomotion in PyBullet<small>Internship report · IISc</small></a></li>
+            <li class="post"><time>2022</time><span class="kind">Report</span><a class="t" href="/assets/pdf/Project_report_internship_website.pdf">Designing Joystick Control Interfaces for Service Robot Teleoperation<small>Internship report · JN Research Labs</small></a></li>
+          </ul>
         </div>
       </section>
 
@@ -426,7 +498,7 @@
               <div class="job-body">
                 <h3>AirLab, Carnegie Mellon University</h3>
                 <p class="role">Graduate Student Researcher · Advisor: <a href="https://theairlab.org/">Sebastian Scherer</a> · Pittsburgh, PA</p>
-                <p class="job-line">Learning whole-body humanoid skills from human demonstrations.</p>
+                <p class="job-line">Whole-body humanoid loco-manipulation on the Unitree G1: agentic retargeting of human–object interactions, jointly with Deva's Lab (<a href="#research">HuMoTAR</a>).</p>
               </div>
             </li>
             <li class="job reveal">
@@ -434,7 +506,7 @@
               <div class="job-body">
                 <h3>FieldAI</h3>
                 <p class="role">Robotics Research Intern · Irvine, CA</p>
-                <p class="job-line">Automatic curricula for perceptive quadruped parkour.</p>
+                <p class="job-line">Failure-guided terrain curricula for perceptive quadruped parkour, deployed on a Boston Dynamics Spot (<a href="#research">FCTS</a>).</p>
               </div>
             </li>
             <li class="job current reveal">
@@ -442,7 +514,7 @@
               <div class="job-body">
                 <h3>Deva's Lab, Carnegie Mellon University</h3>
                 <p class="role">Graduate Student Researcher · Advisor: <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a> · Pittsburgh, PA</p>
-                <p class="job-line">Teaching legged robots new skills from language.</p>
+                <p class="job-line">Agentic robotics and whole-body humanoid control: text-to-trajectory generation for dynamic legged skills (<a href="#research">MimicAgent</a>), and semantic humanoid retargeting of human–object interactions with foundation-model priors, jointly with AirLab (<a href="#research">HuMoTAR</a>).</p>
               </div>
             </li>
             <li class="job reveal">
