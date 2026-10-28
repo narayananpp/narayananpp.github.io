@@ -35,8 +35,6 @@ Add an `<li class="post">` at the top of `#post-list` in `index.html` (newest fi
 <li class="post"><time>2026</time><span class="kind">Blog</span><a class="t" href="…">Title<small>Venue · Lab</small></a></li>
 ```
 
-To feature a post, edit the `.post-feature` card above the list.
-
 ## Converting a GIF to a web video
 
 ```sh
