@@ -229,14 +229,15 @@
                 <h3>Retargeting Through Reasoning for Humanoid–Object Interaction</h3>
                 <p class="authors"><span class="me">Narayanan P. Parameswaran</span>, Jay Karhade, Haoyang He, Neehar Peri, Jay Patrikar, Dong-Ki Kim, Shayegan Omidshafiei, Sebastian Scherer, Deva Ramanan</p>
                 <p class="pub-desc">
-                  Retargeting should preserve what the human does to the object, not just how the body moves. The approach fixes the demonstrated object trajectory as the
-                  goal and lets an ensemble of coding agents refine the kinematic reference and controller through closed-loop rollouts with a frozen whole-body
-                  tracking policy on a Unitree G1 with Dex3 hands.
+                  Humanoid retargeting should preserve a motion’s semantic intent: carrying and placing a chair means moving it to the intended destination,
+                  while leaving the humanoid free to choose its grasp and posture. We use frontier agentic models with a simulator-in-the-loop to write, test
+                  and iteratively refine motion references and control code for dynamically feasible interactions. Across 40 HUMOTO and OMOMO tasks, this achieves
+                  75% semantic success, compared with 17.5% for classical retargeting and 2.5% without feedback.
                 </p>
                 <div class="metrics">
-                  <div class="metric"><b>14.3 cm</b><span>mean object ADD on HUMOTO, down from 56.7 cm</span></div>
-                  <div class="metric"><b>−28.6%</b><span>ADD vs. a single coding agent, across 40 tasks</span></div>
-                  <div class="metric"><b>3×</b><span>lower error on a shelf-righting task when reusing experience from related tasks</span></div>
+                  <div class="metric"><b>75%</b><span>semantic success with simulation feedback, evaluated using an LLM judge</span></div>
+                  <div class="metric"><b>17.5%</b><span>semantic success with classical retargeting</span></div>
+                  <div class="metric"><b>2.5%</b><span>semantic success with one-shot generation, without feedback</span></div>
                 </div>
                 <div class="links">
                   <a class="link" href="https://narayananpp.github.io/semantic-humanoid-retargeting-blog/"><svg><use href="#i-globe" /></svg>Project blog</a>
